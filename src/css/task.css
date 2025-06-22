@@ -1,0 +1,56 @@
+.container {
+  width: 500px;
+  height: 500px;
+  display: block;
+}
+
+.button {
+  width: 100px;
+  height: 30px;
+  margin: 15px;
+  background-color: rgb(8, 159, 246);
+  color: white;
+  display: flex;  
+  justify-content: center;  
+  align-items: center;
+  user-select: none;
+  border-radius: 5px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.bttn_active {
+  box-shadow:0 0 20px #2f8aa0
+}
+
+.massage {
+  height: 0;
+  overflow: hidden;
+}
+.disable {
+  animation-name: invisble;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.active {
+animation-name: visble;
+animation-duration: 0.5s;
+animation-fill-mode: forwards;
+}
+
+@keyframes visble {
+  from {height: 0px;
+        border: none;
+        padding: none;}
+  to {height: 120px;
+      border: 1px solid black;
+      padding: 10px;}
+}
+
+@keyframes invisble {
+  from {height: 120px;
+        border: 1px solid black;
+        padding: 10px;}
+  to {height: 0px;
+      border: none;
+      padding: none;}
+}
